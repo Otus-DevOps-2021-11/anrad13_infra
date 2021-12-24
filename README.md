@@ -30,3 +30,4 @@ testapp_port = 9292
 ## Addiitional
 - startup.sh - script for creation reddit-app instance by yc cli as "yc compute instance create ..."
 - cloud_config.yaml -cloud-config for instance init during the first time boot. Includes user definition with pkey and runcmd sentences for application deploy
+
