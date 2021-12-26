@@ -1,0 +1,5 @@
+{
+    "service_account_key_file": "/home/anrad14/otus/keys/key.json",
+    "folder_id": "b1gv6t1evq0gr4fsevdl",
+    "source_image_family": "ubuntu-1604-lts"
+}
