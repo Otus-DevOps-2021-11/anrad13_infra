@@ -1,7 +1,7 @@
 #!/bin/bash
 yc compute instance create \
-  --name reddit-app2 \
-  --hostname reddit-app2 \
+  --name reddit-vm \
+  --hostname reddit-vm \
   --memory=4 \
 --create-boot-disk name=disk1,size=10,image-id=fd8naqgobd8olqauag2e \
   --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 \
