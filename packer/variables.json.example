@@ -1,0 +1,5 @@
+{
+    "service_account_key_file": "path to real key file",
+    "folder_id": "yandex cloud folder id",
+    "source_image_family": "ubuntu-1604-lts"
+}

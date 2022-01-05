@@ -31,3 +31,17 @@ testapp_port = 9292
 - startup.sh - script for creation reddit-app instance by yc cli as "yc compute instance create ..."
 - cloud_config.yaml -cloud-config for instance init during the first time boot. Includes user definition with pkey and runcmd sentences for application deploy
 
+# HW-7 Packer
+- builder config ubuntu16.json with variables.json and install_mongodb.sh, install_ruby
+- builder config immutable.json with variables.json and install_mongodb.sh, install_ruby.sh, install_reddit.sh
+- script for creating VM with predefined image (that was created by immutable.json)
+### Как запустить проект:
+- to build image with ruby and mongo from REPO_HOME/packer - execute "packer build -var-file=variables.json ubuntu16.json"
+- to build image with ruby,mongo and reddit from REPO_HOME/packer - execute "packer build -var-file=variables.json immutable.json"
+- to create VM with ruby,mongo and reddit from REPO_HOME/packer/config-scripts execute "create-reddit-vm.sh"
+
+# HW-8 Terraform-1
+- created main.tf with external variables.tf and output.tf
+- performed selftasks - variable for provisioner connection, zone variable with predefined value, terraform fmt
+- tasks with ** was not be accomplished
+
