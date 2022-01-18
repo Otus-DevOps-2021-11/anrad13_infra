@@ -45,3 +45,11 @@ testapp_port = 9292
 - performed selftasks - variable for provisioner connection, zone variable with predefined value, terraform fmt
 - tasks with ** was not be accomplished
 
+# HW-9 Terraform-2
+- created modules app, db
+- created prod and stage terraform projects with modules usage
+- task with * was not accomplished
+## Task with ** (add provisioners)
+- module app: provisioner for clone app and set up puma systemd
+- module app: provisioner for creating env file for puma systemd. Env file contains DATABASE_URL as result of "echo DATABASE_URL=${var.db_address} > /home/ubuntu/reddit-env", where ${var.db_address} - local address of db instance
+- module db: provisioner for changing default mongod config to bindIp: 0.0.0.0

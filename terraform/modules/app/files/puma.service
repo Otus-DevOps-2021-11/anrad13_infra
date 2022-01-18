@@ -6,6 +6,9 @@ After=network.target
 Type=simple
 User=ubuntu
 WorkingDirectory=/home/ubuntu/reddit
+
+EnvironmentFile=/home/ubuntu/reddit-env
+
 ExecStart=/bin/bash -lc 'puma'
 Restart=always
 
