@@ -1,0 +1,41 @@
+---
+- name: Install mongo
+  hosts: all
+  become: true
+  tasks:
+  - name: Sleep 15
+    command: sleep 15
+
+  - name: Install apt-transport-https
+    apt:
+      name: apt-transport-https
+      state: present
+
+  - name: Install ca-certificates
+    apt:
+      name: ca-certificates
+      state: present
+
+  # repo key
+  - name: Add APT key for mongod repo
+    apt_key:
+      id: EA312927
+      keyserver: keyserver.ubuntu.com
+
+  - name: Add MongoDB repository
+    apt_repository: repo='deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse' state=present
+
+  - name: install mongodb
+    apt: pkg=mongodb-org state=latest update_cache=yes allow-unauthenticated=yes
+    notify:
+    - start mongodb
+
+  # setup mongod service
+  - name: Setup mongod service
+    systemd:
+      name: mongod
+      enabled: yes
+
+  handlers:
+    - name: start mongodb
+      service: name=mongod state=started

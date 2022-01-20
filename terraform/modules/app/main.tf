@@ -34,6 +34,7 @@ resource "yandex_compute_instance" "app" {
     private_key = file(var.provisioner_connection_private_key_path)
   }
 
+  /*
   provisioner "remote-exec" {
     inline = [
       "echo DATABASE_URL=${var.db_address} > /home/ubuntu/reddit-env"
@@ -48,5 +49,6 @@ resource "yandex_compute_instance" "app" {
   provisioner "remote-exec" {
     script = "${path.module}/files/deploy.sh"
   }
+  */
 
 }
