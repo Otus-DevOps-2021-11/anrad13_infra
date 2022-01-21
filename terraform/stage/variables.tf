@@ -15,11 +15,13 @@ variable public_key_path {
 }
 variable app_disk_image {
   description = "Disk image for reddit app"
-  default     = "fd88choqv540vfvockcr"
+  default     = "fd86koi5ug4ptt2knvsb"
+  #default     = "fd88choqv540vfvockcr"
 }
 variable db_disk_image {
   description = "Disk image for reddit db"
-  default     = "fd8krr4ed8qdn2f8imb0"
+  default     = "fd834gkpuncb84mnvuav"
+  #default     = "fd8krr4ed8qdn2f8imb0"
 }
 variable subnet_id {
   description = "Subnet"
