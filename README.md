@@ -53,3 +53,12 @@ testapp_port = 9292
 - module app: provisioner for clone app and set up puma systemd
 - module app: provisioner for creating env file for puma systemd. Env file contains DATABASE_URL as result of "echo DATABASE_URL=${var.db_address} > /home/ubuntu/reddit-env", where ${var.db_address} - local address of db instance
 - module db: provisioner for changing default mongod config to bindIp: 0.0.0.0
+
+# HW-9 Ansible-1
+- A1 (slide #32) - after rm ~/redit, the running of clone playbook, has shown that ansible restored repo again and output became again (appserver                  : ok=2    changed=1)
+## Task with *
+- docs - https://nklya.medium.com/%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5-%D0%B8%D0%BD%D0%B2%D0%B5%D0%BD%D1%82%D0%BE%D1%80%D0%B8-%D0%B2-ansible-9ee880d540d6
+- create a file inventory.json in ansible dynamic format with static host ip addresses
+- create executable inventory.sh script
+- inventory.sh --list will output the ./inventory.json
+- inventory.sh --host will output {}

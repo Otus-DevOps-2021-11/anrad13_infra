@@ -12,3 +12,8 @@ variable subnet_id {
 variable db_address {
   description = "Address of db"
 }
+
+variable provisioner_connection_private_key_path {
+  description = "Path to private key for provisioner connection"
+}
+

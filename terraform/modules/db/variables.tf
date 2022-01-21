@@ -8,3 +8,7 @@ variable db_disk_image {
 variable subnet_id {
   description = "Subnets for modules"
 }
+
+variable provisioner_connection_private_key_path {
+  description = "Path to private key for provisioner connection"
+}
