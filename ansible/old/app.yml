@@ -22,6 +22,5 @@
       systemd: name=puma enabled=yes
 
   handlers:
-  - name: reload puma
-    systemd: name=puma state=restarted
-
+   - name: reload puma
+     systemd: name=puma state=restarted

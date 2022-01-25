@@ -11,3 +11,5 @@ variables.json
 
 # Ansible
 *.retry
+#Ansible external repo should not be in my repo
+jdauphant.nginx
