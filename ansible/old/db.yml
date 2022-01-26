@@ -13,6 +13,5 @@
       notify: restart mongod
 
   handlers:
-  - name: restart mongod
-    service: name=mongod state=restarted
-
+    - name: restart mongod
+      service: name=mongod state=restarted

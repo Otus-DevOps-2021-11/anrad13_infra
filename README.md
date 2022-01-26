@@ -83,3 +83,13 @@ testapp_port = 9292
 ## Как проверить работоспособность:
  - go to app_external_ip:9292 and check Reddit
 
+# HW-12 Ansible-3
+- createed roles db, app in ./roles
+- installed role jdauphant.nginx to ./roles
+- createed ./environments with stage and prod env
+- created credentials.yml files (./environments/prod|stage), encripted them. Created user.yml playbook and add it to site.yml playbook
+- moved git instalation from app playbook to packer_app playbook
+- rearranged ansible dir with ./old and ./playbooks
+- checked all with real deployment
+## Как запустить проект:
+-see HW-11 Ansible-2
