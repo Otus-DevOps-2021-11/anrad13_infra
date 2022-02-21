@@ -1,12 +1,15 @@
 source 'https://rubygems.org'
 
 gem 'sinatra', '~> 2.0.1'
+gem 'bcrypt', '~> 3.1.7'
 gem 'haml'
 gem 'bson_ext'
 gem 'bcrypt'
 gem 'puma'
 gem 'mongo'
+gem 'bson'
 gem 'json'
+gem 'rack-test'
 
 group :development do
     gem 'capistrano',         require: false
