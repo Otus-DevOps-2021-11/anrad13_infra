@@ -1,0 +1,17 @@
+Vagrant.configure("2") do |config|
+
+    #config.ssh.username = "vagrant"
+    #config.ssh.password = "vagrant"
+
+    config.vm.provider :virtualbox do |v|
+      v.memory = 512
+      v.gui = true
+    end
+
+    config.vm.define "dbserver" do |db|
+      db.vm.box = "ubuntu/xenial64"
+      db.vm.hostname = "dbserver"
+      db.vm.network :private_network, ip: "192.168.56.10"
+    end
+
+  end
